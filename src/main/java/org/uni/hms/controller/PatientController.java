@@ -25,7 +25,7 @@ public class PatientController{
         service.setPatient(patient);
     }
     @PutMapping("/update")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.ACCEPTED)
     public void updatePatient(@RequestBody Patient patient){
         service.updatePatient(patient);
     }
