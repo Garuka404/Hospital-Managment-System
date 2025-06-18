@@ -1,6 +1,7 @@
 package org.uni.hms.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.uni.hms.dto.Patient;
@@ -11,6 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/patient")
 @RequiredArgsConstructor
+@Slf4j
+@CrossOrigin
 public class PatientController{
 
     final PatientService service;
@@ -18,6 +21,7 @@ public class PatientController{
     @GetMapping("/all")
     public List<Patient> allPatient(){
         return  service.getAllPatient();
+
     }
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
