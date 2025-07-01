@@ -24,6 +24,6 @@ public class PrescriptionController {
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
     public List<Prescription>getAllPrescription(){
-        return new ArrayList<>();
+        return service.getAllPrescription();
     }
 }

@@ -3,10 +3,12 @@ package org.uni.hms.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 import org.uni.hms.dto.Patient;
 import org.uni.hms.service.PatientService;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -58,5 +60,6 @@ public class PatientController{
     public List<Patient> searchPatientByContact(@PathVariable String contact){
         return service.searchPatientByContact(contact);
     }
+
 
 }

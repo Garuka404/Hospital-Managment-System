@@ -6,4 +6,10 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+         ddl-auto: update
+    show-sql: true
+
+  liquibase:
+    enabled: true
+    drop-first: false
+    change-log: classpath:db/changelog/db.liquibase-changelog.xml

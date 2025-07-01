@@ -13,4 +13,6 @@ public interface PatientService{
     List<Patient> searchPatientByName(String name);
     List<Patient> searchPatientByNic(String nic);
     List<Patient> searchPatientByContact(String contact);
-}
+    void emailSender();
+
+    }

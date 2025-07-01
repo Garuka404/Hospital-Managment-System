@@ -1,6 +1,7 @@
 package org.uni.hms.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.uni.hms.dto.Patient;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class PatientServiceImpl implements PatientService {
 
     final PatientRepository repository;
@@ -62,5 +64,8 @@ public class PatientServiceImpl implements PatientService {
             patientsList.add(mapper.map(patient,Patient.class));
         });
         return patientsList;
+    }
+    public void emailSender(){
+         log.info("email sended ......");
     }
 }
